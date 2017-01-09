@@ -45,6 +45,7 @@
       // If you have any js library which support Events, replace this part
       // and remove addEvent function (or use original jQuery version)
       addEvent(window, 'resize', resizer);
+      addEvent(window, 'orientationchange', resizer);
     };
 
     if (el.length)
