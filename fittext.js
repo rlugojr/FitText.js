@@ -9,10 +9,7 @@
 * Date: Tue Aug 09 2011 10:45:54 GMT+0200 (CEST)
 */
 (function(){
-  var css = function (el, prop) {
-    return window.getComputedStyle ? getComputedStyle(el).getPropertyValue(prop) : el.currentStyle[prop];
-  };
-  
+
   var addEvent = function (el, type, fn) {
     if (el.addEventListener)
       el.addEventListener(type, fn, false);
@@ -48,6 +45,7 @@
       // If you have any js library which support Events, replace this part
       // and remove addEvent function (or use original jQuery version)
       addEvent(window, 'resize', resizer);
+      addEvent(window, 'orientationchange', resizer);
     };
 
     if (el.length)
